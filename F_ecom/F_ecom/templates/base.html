@@ -1,0 +1,24 @@
+{% load static %}
+<html lang="fr">
+<head>
+    <link href="{% static 'base.css' %}" >
+    <link href="{% static 'header.css' %}" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} home {% endblock title %}  </title>
+</head>
+<body>
+    {% include 'header.html' %}
+    {% include 'nav.html' %}
+
+    {% block content %}
+    
+    {% endblock content %}
+
+    {% include 'footer.html' %}
+    
+</body>
+</html>
+
+
