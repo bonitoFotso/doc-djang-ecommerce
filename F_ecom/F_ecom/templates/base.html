@@ -1,15 +1,18 @@
 {% load static %}
 <html lang="fr">
 <head>
-    <link href="{% static 'base.css' %}" >
-    <link href="{% static 'header.css' %}" >
+    <link rel="stylesheet" href="{% static 'base.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> {% block title %} home {% endblock title %}  </title>
 </head>
 <body>
+    <div class="body" >
+    <div class="head">
     {% include 'header.html' %}
+    </div>
+
     {% include 'nav.html' %}
 
     {% block content %}
@@ -17,7 +20,7 @@
     {% endblock content %}
 
     {% include 'footer.html' %}
-    
+    </div>
 </body>
 </html>
 
